@@ -46,6 +46,17 @@ public class EjerciciosBasicosJava {
        //en cualquier otro valor que tuviera velocidad devolvemos la multa grande
        return 2;
    } 
+   /**
+     * @param numero el numero a evaluar si es o no vanidoso. Es vanidoso si 
+     * es múltiplo de 11 o uno más de un múltiplo de 11
+   */
+   public boolean muyVanidoso(int numero){
+       if (numero % 11 < 2){ //si la división da como resto cero ó uno
+           return true;
+       }
+       return false;
+   }
+   
     
     /**
      * @param args the command line arguments
@@ -62,7 +73,12 @@ public class EjerciciosBasicosJava {
         System.out.println( ejercicio.multa(60, false) );
         System.out.println( ejercicio.multa(65, false) );
         System.out.println( ejercicio.multa(65, true) );
+ 
         
+        System.out.println("Ejercicio 03 muy Vanidoso:");
+        System.out.println( ejercicio.muyVanidoso(22) );
+        System.out.println( ejercicio.muyVanidoso(23) );
+        System.out.println( ejercicio.muyVanidoso(24) );
     }
     
 }
